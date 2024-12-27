@@ -1,0 +1,329 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+  }
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: clickme;
+    src: url(assets/fonts/Slackey-Regular.ttf);
+  }
+
+
+#sectionone {
+    height: 80%;
+    display: block;
+    background-image: url(assets/img/bg.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 0px 0px 0px;
+    display: block;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.button {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border-width: 3px 6px 3px 6px;
+    border-style: solid;
+    border-color: white;
+    width: fit-content;
+    padding: 2px 20px 2px 20px;
+    display: block;
+    font-size: 50px;
+    font-family: clickme;
+    
+}
+
+
+#intro {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+}
+
+#intro a {
+    color: black;
+    background-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    padding: 3px;
+    border-radius: 10px;
+    transition-duration: 0.2s;
+}
+
+#intro a:hover {
+    color: white !important; 
+    background-color: black !important;
+    transition-duration: 0.1s !important;
+}
+
+h3 {
+    font-size: medium;
+}
+
+h1 {
+    font-family: clickme;
+    font-weight: 100;
+}
+
+.socialbutton {
+    width: 50px;
+    transition-duration: 0.3s;
+}
+
+#instabut:hover {
+    filter: invert(100);
+    transition-duration: 0.2s;
+}
+
+#carabut:hover {
+    filter: invert(100);
+    transition-duration: 0.2s;
+}
+
+#bskybut:hover {
+    filter: invert(100);
+    transition-duration: 0.2s;
+}
+
+
+
+
+
+.button:hover {
+    color: black;
+    background-color: white;
+    border-color: black;
+    transition-duration: 0.05s;
+}
+
+#arrowdown {
+    transform: rotate(20deg);
+    color: white;
+    background-color: black;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+#content {
+    background-color: white;
+    height: 500px;
+}
+
+
+
+#navbox {
+    width: 15%; 
+    text-align: center; 
+    margin-left: auto; 
+    margin-right: auto; 
+    justify-content: space-around; 
+    display: flex;
+}
+
+
+
+
+footer {
+    height: 120px;
+    background-color: black;
+    justify-content: space-evenly;
+    color: white;
+    text-align: center;
+    padding: 3px;
+}
+
+footer a {
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    transition-duration: 0.2s;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    padding: 3px;
+}
+
+footer a:hover {
+    color: white;
+    background-color: black;
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    transition-duration: 0.1s;
+}
+
+
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 1028px) {
+
+    #navbox {
+        width: 60%;
+    }
+
+    .logo {
+        padding: 0px;
+        width: 80%;
+    }
+
+    #intro {
+        width: 90%;
+    }
+
+    #intro a {
+        padding: 0px 5px 3px 5px;
+    }
+
+  #sectionone {
+        background-position: 70%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Gallery stuff */
+
+.container.gallery-container {
+    background-color: #fff;
+    color: #35373a;
+    min-height: 100vh;
+    padding: 30px 50px;
+}
+
+.gallery-container h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+}
+
+.gallery-container p.page-description {
+    text-align: center;
+    margin: 25px auto;
+    font-size: 18px;
+    color: #999;
+}
+
+.tz-gallery {
+    padding: 40px;
+}
+
+/* Override bootstrap column paddings */
+.tz-gallery .row > div {
+    padding: 2px;
+}
+
+.tz-gallery .lightbox img {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+}
+
+.tz-gallery .lightbox:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+    opacity: 0;
+    color: #fff;
+    font-size: 26px;
+    font-family: 'Glyphicons Halflings';
+    content: '\e003';
+    pointer-events: none;
+    z-index: 9000;
+    transition: 0.4s;
+}
+
+
+.tz-gallery .lightbox:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(46, 132, 206, 0.7);
+    content: '';
+    transition: 0.4s;
+}
+
+.tz-gallery .lightbox:hover:after,
+.tz-gallery .lightbox:hover:before {
+    opacity: 1;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+
+
+
+
+
+
+@media(max-width: 768px) {
+    body {
+        padding: 0;
+    }
+}
+
+
+
+
+
+
